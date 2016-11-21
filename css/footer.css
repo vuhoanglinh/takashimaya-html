@@ -1,0 +1,20 @@
+.menu_footer{
+    font-family: 'ElleFutura-Bold';
+    color: red;
+    font-size: 14px;
+    margin-left: 0px;
+    float: left;
+}
+.footer_left {
+    font-family: 'ElleFutura';
+    float: left;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: -10px;
+}
+.footer_right {
+    font-family: 'ElleFutura';
+    margin-top: 50px;
+    float: right;
+    margin-right: 0px;
+}

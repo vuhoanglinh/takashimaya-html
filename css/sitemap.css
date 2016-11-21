@@ -1,0 +1,167 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  position: relative;
+}
+.sitemap_bg {
+	background-image: url('../images/IMAGE_TAKASHIMAYA_CORPORATE-04.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center -70px;
+}
+.sitemap_bg .form-search,
+.sitemap_bg .input-group-addon {
+	color: #fff;
+}
+.imgage-flower {
+	display: none;
+}
+.imgage-flower img {
+	width: 300px;
+}
+.icon-facebook,
+.icon-search {
+    display: none !important;
+}
+.menu-top-sitemap {
+	-webkit-column-count: initial;
+    -webkit-column-gap: 0;
+    -moz-column-count: initial;
+    -moz-column-gap: 0;
+    column-count: initial;
+    column-gap: 0;
+}
+.menu-top-sitemap .list-inlinewp {
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: #b21c25;
+	border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    padding: 10px 20px;
+}
+
+.menu-top-sitemap .list-inlinewp li {
+	margin: 0;
+	float: left;
+}
+.menu-top-sitemap .list-inlinewp>li {
+	padding: 10px 15px;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(1) {
+	width: 15%;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(2) {
+	width: 25%;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(3) {
+	width: 18%;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(4) {
+	width: 10%;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(5) {
+	width: 17%;
+}
+.menu-top-sitemap .list-inlinewp>li:nth-child(6){
+	width: 15%;
+}
+
+
+.menu-top-sitemap .list-inlinewp li ul {
+	-webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+.menu-top-sitemap .list-inlinewp li a {
+	text-align: left;
+	padding: 20px 0;
+}
+
+.menu-top-sitemap .list-inlinewp li ul a {
+	font-family: 'ElleFutura';
+	padding: 0;
+	font-size: 11pt;
+	height: 24px;
+	opacity: 0.8;
+} 
+@media screen and (max-width: 992px) {
+	.menu-top-sitemap .list-inlinewp>li:nth-child(1),
+	.menu-top-sitemap .list-inlinewp>li:nth-child(4) {
+		width: 25%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(2),
+	.menu-top-sitemap .list-inlinewp>li:nth-child(5) {
+		width: 45%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(3),
+	.menu-top-sitemap .list-inlinewp>li:nth-child(6) {
+		width: 30%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(4) {
+		clear: both;
+	}
+}
+/*Extra small devices (phones, less than 768px)*/
+@media screen and (max-width: 768px) {
+	.sitemap_bg {
+		background-position: -100px top;
+		background-size: cover;
+  		display: flex;
+	}
+	.imgage-flower {
+		display: block;
+		position: fixed;
+		right: 0;
+		bottom: 85px;
+		z-index: 222;
+	}
+	.imgage-flower img {
+		width: 250px;
+	}
+	.icon-facebook,
+    .icon-search {
+        display: inline-block !important;
+    }
+
+    .menu-top-sitemap .list-inlinewp>li:nth-child(1) {
+		width: 25%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(2) {
+		width: 45%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(3) {
+		width: 30%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(4) {
+		width: 10%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(5) {
+		width: 17%;
+	}
+	.menu-top-sitemap .list-inlinewp>li:nth-child(6){
+		width: 15%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.imgage-flower {
+		bottom: 30px;
+	}
+	.imgage-flower img {
+		width: 150px;
+	}
+	.menu-bottom {
+        margin: auto;
+        float: none;
+    }
+    .menu-top-sitemap {
+    	width: 100%;
+    }
+    .menu-top-sitemap .list-inlinewp>li {
+    	width: 100% !important;
+    }
+}

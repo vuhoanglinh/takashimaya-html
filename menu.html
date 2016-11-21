@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="shortcut icon" href="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <title>Menu</title>
+    <!-- jquery -->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+   	<!-- bootstrap -->  
+   	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   	<!-- font awesome -->      
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylelfe.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/sitemap.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="sitemap_bg">
+	<header id="header" class="header">
+		 <!-- brand image-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pull-left logo">
+                    <a href="#">
+                        <img class="img-responsive" alt="Brand" src="./images/logo.png" width="307">
+                    </a>
+                </div>
+                <div class="pull-right navbar-top">
+                    <ul class="list-inline pull-right">
+                        <li class="icon-facebook">
+                            <a href="#">
+                                <img class="img-responsive" alt="Brand" src="./images/face_icon2.png" width="30">
+                            </a>
+                        </li>
+                        <li class="icon-search">
+                            <a href="#">
+                                <img class="img-responsive" alt="Brand" src="./images/face_icon3.png" width="30">
+                            </a>
+                        </li>
+                        <li id="menu-collapse-btn" class="icon-menu">
+                            <a href="#">
+                                <img class="img-responsive" alt="Brand" src="./images/face_icon1.png" width="30">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="menu-collapse" class="row menu-collapse show">
+                <!-- search begin --> 
+                <div class="col-xs-12">
+                    <form class="form-search">
+                        <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-addon">SEARCH</div>
+                          <input type="text" class="form-control" placeholder="">
+                          <span class="input-group-btn">
+                            <button class="btn" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </form>
+                </div>            
+                <!-- search end -->
+                
+                <!-- menu top begin -->
+                <div class="col-xs-12 menu-top show">
+                    <ul class="list-inlinewp">
+                        <li><a href="">TOP MESSAGE</a></li>
+                        <li><a href="">TAKASHIMAYA GROUP</a></li>
+                        <li><a href="">TAKASHIMAYA VIETNAM</a></li>
+                        <li><a href="">NEWS</a></li>
+                        <li><a href="">WORK WITH US</a></li>
+                        <li><a href="">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <!-- menu top end -->
+                
+                <!-- menu top begin -->
+                <div class="col-xs-12 menu-bottom">
+                    <div class="menu-bottom-left">
+                        <a href="">SHOPPING NOW</a>
+                    </div>
+                    <div class="menu-bottom-right">
+                        <div class="menu-bottom-right-top">
+                            <a href="#" class="js-collap" data-toggle=".menu-bottom-right-bottom">VISITING THE STORE <span class="pull-right"><i class="fa fa-caret-right" aria-hidden="true"></i></span></a>
+                        </div>
+                        <div class="menu-bottom-right-bottom">
+                            <ul class="list-inlinewp">
+                                <li><a href="">TAKASHIMAYA <br /> VIETNAM</a></li>
+                                <li><a href="">TAKASHIMAYA <br />SINGAPO</a></li>
+                                <li><a href="">SHANGHAI <br />TAKASHIMAYA</a></li>
+                                <li><a href="">DAYEH (TAPEI) <br />TAKASHIMAYA</a></li>
+                                <li><a href="">JAPAN <br />HEADQUARTER</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- menu top end -->
+            </div>
+        </div>
+	</header>
+    <script>
+        $(document).ready(function() {
+            $('.js-collap').click(function() {
+                var selector = $(this).attr('data-toggle');
+                $('.js-collap i').toggleClass("fa-caret-right");
+                $('.js-collap i').toggleClass("fa-caret-down");
+                $(selector).toggle();
+            });
+        })
+    </script>
+    <div class="imgage-flower">
+        <img class="img-responsive" alt="Brand" src="./images/IMAGE_TAKASHIMAYA_CORPORATE-63.png">
+    </div>
+</body>
+</html>

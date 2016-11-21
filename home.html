@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/jquery.flipster.css" rel="stylesheet">
+    <link href="css/flipsternavtabs.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.flipster.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        // ============ MENU TOP WHEN SCROLL
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            $('#debug').html(scroll);
+            // Do something
+            //alert(scroll);
+        });
+        // button to top
+        $('.bt_totop').hide();
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                $('.bt_totop').show();
+            }
+        });
+        $('.bt_totop').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500, function() {
+                $('.bt_totop').hide();
+            });
+        });
+        //$('.paper').addClass('animated zoomIn').removeClass('animate_start');
+    });
+
+    function processLink(ele) {
+        var hrefAtt = $(ele).attr('href');
+        if (hrefAtt.indexOf('javascript') == -1) {
+            location.href = hrefAtt;
+
+        }
+    }
+
+    /*function show_animation(){
+    	$('.paper').addClass('animate_start').waypoint(function(direction) {
+    	console.log($(this));
+    	  $(this).addClass('animated zoomIn').addClass('animate_finish');
+    	},{
+    	  offset:'115%'
+    	});
+    }*/
+    </script>
+</head>
+
+<body>
+    <link href="css/home.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/tooltip-curved.css" />
+    <script>
+    var current_slide = 0;
+    var slider;
+    var slide_transition_finish = true;
+    var slide_item_amount = 0;
+    var sliderQueue = [];
+    var isRun = false,
+        dl = 1450;
+    var height_item = 0;
+    var top_s = 0;
+    $(document).ready(function() {
+
+        $(window).resize(function() {
+            var env = findBootstrapEnvironment();
+            if (env != 'xs') {
+                pc_mode();
+            } else {
+                mobile_mode();
+            }
+        });
+        $(window).trigger('resize');
+
+
+
+    });
+
+    function check_bt_to_top() {
+        current_slide = slider.getCurrentSlide();
+        if (current_slide < 1) {
+            $('.bt_totop').hide();
+        } else {
+            $('.bt_totop').show();
+        }
+    }
+
+    function findBootstrapEnvironment() {
+        var envs = ['xs', 'sm', 'md', 'lg'];
+
+        $el = $('<div>');
+        $el.appendTo($('body'));
+
+        for (var i = envs.length - 1; i >= 0; i--) {
+            var env = envs[i];
+
+            $el.addClass('hidden-' + env);
+            if ($el.is(':hidden')) {
+                $el.remove();
+                return env
+            }
+        };
+    }
+    var flag_pc_mode = false;
+
+    function pc_mode() {
+        slide_item_amount = $('.bxslider .item').length;
+        height_item = $('.item').height();
+
+        top_s = height_item / 2;
+        if (!flag_pc_mode) {
+            flag_pc_mode = true;
+            $('.bt_totop').hide();
+            slider = $('.bxslider').bxSlider({
+                mode: 'vertical',
+                speed: 800,
+                controls: false,
+                infiniteLoop: false,
+                onSliderLoad: function() {
+                    $(".bx-pager-item").each(function(i, pageritem) {
+                        data = ['<?=implode("', '", $slide_arr)?>'];
+                        // if(i>0) return;
+
+                    });
+                },
+                onSlideBefore: function() {
+                    check_bt_to_top();
+                },
+                onSlideAfter: function() {
+                    slide_transition_finish = true;
+                    // slide 2
+                    if (current_slide == 1) {
+                        $('.paper').removeClass('hide');
+                        $('.paper').addClass('animate_start');
+                        $('.paper').addClass('animated');
+                        //$('.paper').addClass('zoomIn');
+                        $('.paper').addClass('animate_finish');
+                        setTimeout(function() {
+                            $('.hinh_text').removeClass('hide');
+                            $('.hinh_text').addClass('animate_start');
+                            $('.hinh_text').addClass('animated');
+                            $('.hinh_text').addClass('zoomIn');
+                            $('.hinh_text').addClass('animate_finish');
+                        }, 200);
+
+                    } else {
+                        $('.paper').addClass('hide');
+                        $('.paper').removeClass('animate_start');
+                        $('.paper').removeClass('animated');
+                        //$('.paper').removeClass('zoomIn');
+                        $('.paper').removeClass('animate_finish');
+
+                        $('.hinh_text').addClass('hide');
+                        $('.hinh_text').removeClass('animate_start');
+                        $('.hinh_text').removeClass('animated');
+                        $('.hinh_text').removeClass('zoomIn');
+                        $('.hinh_text').removeClass('animate_finish');
+                    }
+                    // slide 3	
+                    if (current_slide == 2) {
+                        setTimeout(function() {
+                            $('.text_slider3').removeClass('hide');
+                            $('.text_slider3').addClass('animate_start');
+                            $('.text_slider3').addClass('animated');
+                            $('.text_slider3').addClass('zoomIn');
+                            $('.text_slider3').addClass('animate_finish');
+                        }, 200);
+
+                    } else {
+
+                        $('.text_slider3').addClass('hide');
+                        $('.text_slider3').removeClass('animate_start');
+                        $('.text_slider3').removeClass('animated');
+                        $('.text_slider3').removeClass('zoomIn');
+                        $('.text_slider3').removeClass('animate_finish');
+                    }
+                    // slide 4	
+                    if (current_slide == 3) {
+                        $('.tapbao').removeClass('hide');
+                        $('.tapbao').addClass('animate_start');
+                        $('.tapbao').addClass('animated');
+                        //$('.paper').addClass('zoomIn');
+                        $('.tapbao').addClass('animate_finish');
+                        setTimeout(function() {
+                            $('.tintuc_img').removeClass('hide');
+                            $('.tintuc_img').addClass('animate_start');
+                            $('.tintuc_img').addClass('animated');
+                            $('.tintuc_img').addClass('zoomIn');
+                            $('.tintuc_img').addClass('animate_finish');
+                        }, 200);
+
+                    } else {
+                        $('.tapbao').addClass('hide');
+                        $('.tapbao').removeClass('animate_start');
+                        $('.tapbao').removeClass('animated');
+                        //$('.tapbao').removeClass('zoomIn');
+                        $('.tapbao').removeClass('animate_finish');
+
+                        $('.tintuc_img').addClass('hide');
+                        $('.tintuc_img').removeClass('animate_start');
+                        $('.tintuc_img').removeClass('animated');
+                        $('.tintuc_img').removeClass('zoomIn');
+                        $('.tintuc_img').removeClass('animate_finish');
+                    }
+                    // slide 3
+                    if (current_slide == 4) {
+                        $('.text_slidercuoi').removeClass('hide');
+                        $('.text_slidercuoi').addClass('animate_start');
+                        $('.text_slidercuoi').addClass('animated');
+                        $('.text_slidercuoi').addClass('zoomIn');
+                        $('.text_slidercuoi').addClass('animate_finish');
+                    } else {
+
+                        $('.text_slidercuoi').addClass('hide');
+                        $('.text_slidercuoi').removeClass('animate_start');
+                        $('.text_slidercuoi').removeClass('animated');
+                        $('.text_slidercuoi').removeClass('zoomIn');
+                        $('.text_slidercuoi').removeClass('animate_finish');
+                    }
+                }
+            });
+        } else {
+            slider.reloadSlider({
+                mode: 'vertical',
+                speed: 800,
+                controls: false,
+                infiniteLoop: false,
+                onSliderLoad: function() {
+                    $(".bx-pager-item").each(function(i, pageritem) {
+                        data = ['<?=implode("', '", $slide_arr)?>'];
+                        // if(i>0) return;
+                    });
+                },
+                onSlideBefore: function() {
+                    check_bt_to_top();
+                },
+                onSlideAfter: function() {
+                    slide_transition_finish = true;
+                }
+            });
+        }
+        $('.btn_down').click(function() {
+            current_slide = slider.getCurrentSlide();
+            if (current_slide < (slide_item_amount - 1)) {
+                slider.goToNextSlide();
+            }
+        });
+        $('.btn_down2').click(function() {
+
+            slider.goToSlide(current_slide - 1);
+
+        });
+        $('.main_content').mousewheel(function(event, delta, deltaX, deltaY) {
+            event.preventDefault();
+            sliderQueue.push(delta);
+            if (!isRun) {
+                // check current slide is loaded			
+                setTimeout(resetTran, dl);
+                if (sliderQueue.length) {
+                    runSlide(sliderQueue.pop());
+                    sliderQueue = [];
+                }
+            }
+        });
+        $('.bt_totop').unbind('click');
+        $('.bt_totop').click(function() {
+            slider.goToSlide(0);
+        });
+
+
+    }
+
+    function resetTran() {
+        isRun = false;
+    }
+
+    function runSlide(delta) {
+        if (isRun)
+            return;
+        delta > 0 ? slider.goToPrevSlide() : slider.goToNextSlide();
+        isRun = true;
+    }
+
+    function mobile_mode() {
+        if (flag_pc_mode) {
+            slider.destroySlider();
+        }
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 400) {
+                $('.bt_totop').show();
+            }
+        });
+        $('.bt_totop').unbind('click');
+        $('.bt_totop').hide();
+        $('.bt_totop').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500, function() {
+                $('.bt_totop').hide();
+            });
+        });
+        $('.main_content').unbind('mousewheel');
+
+
+    }
+
+    function scroll_to(index_id) {
+        slider.goToSlide(index_id);
+    }
+
+
+
+    $(document).on("mousemove", function(event) {
+        var yPostion = event.pageY;
+        if (yPostion <= top_s) {
+
+            $('.btn_down2').css({
+                'display': 'block !important'
+            });
+            $('.btn_down2').removeClass('top_slider');
+            $('.btn_down').addClass('bottom_slider');
+
+
+        } else {
+            $('.btn_down').css({
+                'display': 'block !important'
+            });
+            $('.btn_down').removeClass('bottom_slider');
+            $('.btn_down2').addClass('top_slider');
+        }
+
+    });
+    </script>
+    <div class="main_content">
+        <!--<div class="bt_totop ">
+	<img class="hinh_bt_top" src="images/BacktoTop.png" />
+</div>-->
+        <section class="header visible-xs">
+            <div class="container">
+                <a href="home.html"><img class="logo hidden-xs img-responsive" src="images/logo.png" alt="" title="" /></a>
+                <a href="home.html"><img class="logo_m visible-xs img-responsive" src="images/logo_m.png" alt="" title="" /></a>
+                <div class="group_content">
+                    <img class="group_icon_img hidden-xs" src="images/face_icon1.png" alt="" title="" />
+                    <img class="group_icon_img visible-xs menu_icon_m" src="images/face_icon1.png" alt="" title="" />
+                    <img class="group_icon_img hidden-xs" src="images/face_icon2.png" alt="" title="" />
+                    <img class="group_icon_img visible-xs menu_icon_m" src="images/face_icon2.png" alt="" title="" />
+                    <img class="group_icon_img hidden-xs" src="images/face_icon3.png" alt="" title="" />
+                    <img class="group_icon_img visible-xs menu_icon_m" src="images/face_icon3.png" alt="" title="" />
+                </div>
+            </div>
+        </section>
+        <div class="menu hidden-xs">
+            <a href="home.html">
+                <div class="logo hidden-xs"><img class="img-responsive" src="images/8.png" alt="" title="" /> </div>
+            </a>
+            <div class="logo_m visible-xs"></div>
+            <div class="group_content">
+                <img class="group_icon_img hidden-xs" src="images/face_icon1.png" alt="" title="" />
+                <img class="group_icon_img visible-xs menu_icon_m" src="images/face_icon1.png" alt="" title="" />
+                <img class="group_icon_img hidden-xs" src="images/face_icon2.png" alt="" title="" />
+                <img class="group_icon_img visible-xs menu_icon_m" src="images/face_icon2.png" alt="" title="" />
+                <img class="group_icon_img hidden-xs" src="images/face_icon3.png" alt="" title="" />
+            </div>
+        </div>
+        <ul class="bxslider">
+            <!--<div class="item slider1" id="scroll_to_go_to_top">		
+	<div class="container-fluid no-padding" id="home_page">
+		<section id="section_head">		
+			<div class="container">
+				<div class="col-xs-12">
+					<div class="language_icon"></div>
+				</div>						
+			</div>		
+		</section>	
+		<section id="section_red_container">		
+			<div class="container" id="section_red">
+				<div class="col-xs-6 no-padding">
+					<a href="#"><p class="red_text red_text_left">Giới thiệu</p></a>
+				</div>
+				<div class="col-xs-6 no-padding">
+					<a href="#"><p class="red_text red_text_right">Trải nghiệm</p></a>
+				</div>				
+			</div>		
+		</section>
+		<footer>		
+		<div id="footer_container" class="container">
+			<div class="col-sm-6 col-xs-12 no-padding">
+				<p class="footer_tex">Bản quyền thuộc sở hữu của công ty TNHH Takashimaya Việt Nam</p>
+			</div>
+			<div class="col-sm-6 col-xs-12 no-padding">
+				<p class="footer_tex footer_tex_right"><a href="#">Điều khoản sử dụng</a> | <a href="#">Chính sách bảo mật</a></p>
+			</div>
+		</div>		
+	</footer>
+	</div>		
+	<div class="btn_down hidden-xs"><img class="img-responsive down_arrow" src="images/down_arrow2.png"></div>
+</div>-->
+            <div class="item slider2" id="scroll_to_featured_customers">
+                <div class="container-fluid">
+                    <!--<img class="top_arrow btn_down2 visible-lg" src="images/top_arrow.png" alt="" title="" />-->
+                    <img class="bottom_arrow btn_down visible-lg bottom_slider" src="images/down_arror.png" alt="" title="" />
+                </div>
+                <!--<div class="btn_down btn_down_giaiphap hidden-xs"><img class="img-responsive down_arrow" src="images/down_arrow2.png"></div>-->
+            </div>
+            <div class="item slider3">
+                <img class="top_arrow btn_down2 visible-lg top_slider" src="images/top_arrow.png" alt="" title="" />
+                <img class="bottom_arrow btn_down visible-lg" src="images/down_arror.png" alt="" title="" />
+                <!-- hien tren pc de co hieu ung-->
+                <a href="about.html">
+                    <div class="hinh_text animate_start hidden-xs"><img class="img-responsive" src="images/4.png" alt="" title="" /> </div>
+                </a>
+                <!-- hien tren mobile ko co co hieu ung-->
+                <a href="about.html">
+                    <div class="hinh_text animate_finish hidden-sm hidden-md hidden-lg"><img class="img-responsive" src="images/4.png" alt="" title="" /> </div>
+                </a>
+            </div>
+            <div class="item slider4" id="page_4">
+                <img class="top_arrow btn_down2 visible-lg" src="images/top_arrow.png" alt="" title="" />
+                <img class="bottom_arrow btn_down visible-lg" src="images/down_arror.png" alt="" title="" />
+                <section id="section_toancau">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="box_item">
+                                    <img class="box_item_img img-resonsive" src="images/toancau_img.png" />
+                                    <img class="box_item_title img-resonsive text_slider3 animate_start hidden-xs" src="images/text_toancau.png" />
+                                    <img class="box_item_title img-resonsive text_slider3 animate_finish hidden-sm hidden-md hidden-lg" src="images/text_toancau.png" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="box_item box_item_right">
+                                    <img class="box_item_img fix_right img-resonsive " src="images/vietnam_img.png" />
+                                    <img class="box_item_title_right box_item_title img-resonsive text_slider3 animate_start hidden-xs" src="images/text_vietnam.png" />
+                                    <img class="box_item_title_right box_item_title img-resonsive text_slider3 animate_finish hidden-sm hidden-md hidden-lg" src="images/text_vietnam.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="item slider5">
+                <img class="top_arrow btn_down2 visible-lg" src="images/top_arrow.png" alt="" title="" />
+                <img class="bottom_arrow btn_down visible-lg" src="images/down_arror.png" alt="" title="" />
+                <a href="tintuc.html">
+                    <div class="tintuc_img animate_start hidden-xs"><img class="" src="images/tintuc_img.png" alt="" title="" /></div>
+                </a>
+                <a href="tintuc.html">
+                    <div class="tintuc_img animate_finish hidden-sm hidden-md hidden-lg"><img class="text_tintuc" src="images/tintuc_img.png" alt="" title="" /></div>
+                </a>
+            </div>
+            <div class="item slider6" id="page_4">
+                <img class="top_arrow btn_down2 visible-lg" src="images/top_arrow.png" alt="" title="" />
+                <section id="section_toancau" class="fix_margin">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="box_item">
+                                    <img class="box_item_img img-resonsive" src="images/slider6_hinh1.png" />
+                                    <img class="box_item_title img-resonsive text_slidercuoi animate_start hidden-xs" src="images/slider6_text2.png" />
+                                    <img class="box_item_title img-resonsive text_slidercuoi animate_finish hidden-sm hidden-md hidden-lg" src="images/slider6_text2.png" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="box_item box_item_right">
+                                    <img class="box_item_img fix_right img-resonsive" src="images/slider6_hinh2.png" />
+                                    <img class="box_item_title_right box_item_title img-resonsive text_slidercuoi animate_start hidden-xs" src="images/slider6_text1.png" />
+                                    <img class="box_item_title_right box_item_title img-resonsive text_slidercuoi animate_finish hidden-sm hidden-md hidden-lg" src="images/slider6_text1.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container footer_home">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
+                                <p class="footer_left">All rights reserved by Takashimaya Vietnam Ltd</p>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5">
+                                <p class="footer_right">Terms of use | Privacy Policy</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>

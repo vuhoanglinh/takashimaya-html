@@ -1,0 +1,120 @@
+/*begin header*/
+.thanhngang{
+	background: #a7a9ab;
+	height: 40px;
+}
+.news_chitiet{
+	font-family: 'ElleFutura';
+	float: left; 
+	color: #fff;
+	font-size: 12px;
+	padding-left: 20px;
+	line-height: 37px;
+	height: 40px;
+	width: 94px;
+}
+.culture{
+	font-family: 'ElleFutura';
+	float: left;
+	color: #fff;
+	font-size: 12px;
+	padding-left: 10px;
+	line-height: 37px;
+	height: 40px;
+	width: 94px;
+	margin-left: 20px;
+}
+.news_chitiet:hover, .culture:hover, .news_chitiet.active, .culture.active{
+	background: url(../images/hover_news.png);
+	width: 94px;
+}
+
+.bt_totop{
+	position: fixed;
+	right: 22px;
+	bottom: 5px;
+	width: 30px;
+	height: 50px;
+	z-index:9999;
+	cursor: pointer;	
+}
+.hinh_bt_top{
+	width:35px;
+	height:35px;
+}.chiase_detail{
+	float: right;
+}
+.icon_email{
+	float: left;
+	margin-top: 55px;
+	cursor: pointer;
+	padding-right: 5px;
+}
+.occaecat{
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.text_content p{
+	margin-left: 0px;
+	margin-top: 15px;
+	} 
+.home {
+	margin-top: 0px;
+	padding-top: 0px; 
+}
+
+@media screen and (min-width: 768px) {
+	/*begin header*/
+	.top{
+		width: 80px;
+	}
+	.takashimaya{
+		width: 110px;
+	}
+	
+	/*end header*/
+	.text_item{
+		margin-left: 0px !important;
+	}
+	.bt_totop{
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		width: 50px;
+		height: 50px;
+		z-index:9999;
+		cursor: pointer;	
+	}
+}
+@media screen and (min-width: 992px) {
+	/*begin header*/
+	.top{
+		width: 110px;
+	}
+	.takashimaya{
+		width: 150px;
+	}
+	
+	.bt_totop{
+		right: 5px;
+	}
+}
+@media screen and (min-width: 1200px) {	
+	
+	.top{
+		width: 110px;
+	}
+	.takashimaya{
+		width: 150px;
+	}
+	.contact_footer{
+		margin-left: 38px;
+	}
+	.bg_header_about{
+		height:608px;
+		padding-top:170px;
+	}
+	.owl-theme .owl-controls{
+		display: none !important;
+	}
+}

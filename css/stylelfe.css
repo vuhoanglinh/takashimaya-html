@@ -1,0 +1,780 @@
+* {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+a {
+    text-decoration: none;
+    color: #EC1C24
+}
+.menu-collapse {
+    display: none;
+    margin-top: 84px;
+    position: relative;
+    z-index: 999;
+}
+.show {
+    display: block !important;
+}
+.header {
+    padding-top: 24px;
+}
+.input-group-addon,
+.input-group .form-control{
+    font-size: 12pt;
+}
+.input-group-addon img,
+.input-group-btn img {
+    max-width: 100%;
+}
+.form-search {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+}
+.form-search .input-group-addon,
+.form-search .form-control,
+.form-search .btn {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #b21c25;
+    box-shadow: none;
+    height: 35px;
+}
+.form-search .input-group-btn .btn i{
+    font-size: 12pt;
+}
+
+.menu-top {
+    -webkit-column-count: 6;
+    -webkit-column-gap: 10px;
+    -moz-column-count: 6;
+    -moz-column-gap: 10px;
+    column-count: 6;
+    column-gap: 10px;
+    font-size: 11pt;
+    margin-bottom: 40px;
+}
+.menu-top ul,
+.menu-bottom-right-bottom ul{
+    padding: 0;
+    margin: 0;
+}
+.menu-top li,
+.menu-bottom-right-bottom li{
+    list-style: none;
+    text-align: center;
+}
+.menu-top li {
+    margin-bottom: 10px;
+}
+.menu-top li a,
+.menu-bottom-right-top a,
+.menu-bottom-right-bottom a{
+    padding: 10px;
+}
+.menu-top li a {
+    font-size: 10pt;
+    height: 64px;
+    padding: 20px 5px;
+    vertical-align: middle;
+}
+.menu-top li a,
+.menu-bottom-left a,
+.menu-bottom-right-top a,
+.menu-bottom-right-bottom a {
+    font-family: 'ElleFutura-Bold';
+    background-color: #b21c25;
+    color: #fff;
+    display: block;
+    width: 100%;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu-bottom-right-bottom a {
+    text-align: left;
+    height: 56px;
+    padding: 10px 40px;
+}
+.menu-top, 
+.menu-bottom {
+    clear: both;
+}
+.menu-bottom-right-top {
+    margin-bottom: 3px;
+}
+
+.menu-bottom .menu-bottom-left {
+    width: 25%;
+    font-size: 15pt;
+    text-align: center;
+    padding-right: 3px;
+    float: left;
+}
+
+.menu-bottom .menu-bottom-right {
+    width: 75%;
+    float: left;
+}
+
+.menu-bottom .menu-bottom-left a {
+    padding: 50px 0;
+    height: 130px;
+}
+.menu-bottom-right-top a {
+    height: 70px;
+    padding: 20px;
+    font-size: 15pt;
+}
+
+.menu-bottom .menu-bottom-right-bottom{
+    -webkit-column-count: 5;
+    -webkit-column-gap: 3px;
+    -moz-column-count: 5;
+    -moz-column-gap: 3px;
+    column-count: 5;
+    column-gap: 3px;
+    font-size: 9pt;
+    margin-bottom: 40px;
+    clear: both;
+}
+.menu-bottom .menu-bottom-right-bottom li {
+    margin-bottom: 3px;
+}
+.image-wp {
+    position: relative;
+    z-index: 11;
+}
+.image-text-wrap {
+    position: absolute;
+    text-align: center;
+    z-index: 222;
+    top: calc(50% - 16pt);
+    width: 100%;
+}
+.image-text-wrap h2 {
+    font-family: "ElleFutura-Bold";
+    font-size: 30pt;    
+    color: #fff;
+    margin: 0;
+}
+
+footer {
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+footer .left-banner {
+    padding-right: 2px;
+}
+footer .right-banner {
+    padding-left: 2px;
+}
+
+.footerLastRow {
+    margin-bottom: 0px;
+    font-size: 10pt;
+}
+
+.footerMenuHeader {
+    font-family: "ElleFutura-Bold";
+    padding-top: 50px;
+    color: #EA2227;
+}
+
+.footerMenuList{
+    padding-top: 29px;
+    font-size: 11pt;
+}
+
+.footer2Img {
+    padding-top: 41px;
+}
+
+@-moz-document url-prefix() {
+    .menu-top li,
+    .menu-bottom .menu-bottom-right-bottom li{
+        display: block;
+        width: 100%;
+    }
+}
+.selector:not(*:root) {
+    .menu-top li,
+    .menu-bottom .menu-bottom-right-bottom li{
+        float: left;
+        width: 100%;
+    }
+}
+
+.topMessageHead {
+    padding: 15px 120px; 
+}
+
+/* on PC img will float left, next right text*/
+.topMessageHead .introImg {
+    float: left;
+    padding-right: 15px; /*more 15px*/
+}
+.topMessageHead .introTxt{
+    padding-left: 15px; /*more 15px*/
+    float: right;
+    text-align: right
+}
+.topMessageHead .introTxt h1{
+    width: 70%;
+    float: right; /*because width is 70%*/
+    text-align: right;
+    font-size: 25pt;
+}
+.topMessageHead .introTxt p{
+    clear: both;
+    float: right;
+}
+.topMessageContent {
+    text-align: justify;
+    background-color: #EC1C24;
+    color: white; /*for text*/
+    padding-left: 156.52px;
+    padding-right: 156.52px;
+}
+
+/* tinnt: all p tab must be padding top and bottom 20px */
+/*p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}*/
+
+.js-collap span {
+    display: none;
+}
+.mt15 {
+    margin-top: 15px;
+}
+.result-title {
+    margin-bottom: 45px;
+}
+.search .form-search .input-group-addon, 
+.search .form-search .form-control, 
+.search .form-search .btn {
+    border-bottom: 3px solid #EC1C24;
+}
+.search .form-search {
+    margin-bottom: 0;
+}
+.result-content {
+    min-height: 300px;
+}
+.result-item,
+.result-item .post {
+    width: 100%;
+    display: block;
+    float: left;
+}
+.result-item .post {
+    font-size: 10pt;
+}
+.result-item {
+    margin-bottom: 50px;
+}
+.result-item .post .post-image {
+    width: 90px;
+    padding-right: 7px;
+}
+.result-item .post .post-image,
+.result-item .post .post-content {
+    float: left;
+}
+.post-title {
+    margin-top: -4px;
+    margin-bottom: 0;
+}
+.result-recent .result-item .post .post-image {
+    width: 75px;
+}
+.result-recent .result-item .post {
+    font-size: 9pt;
+}
+.result-recent-title {
+    font-size: 16pt;
+    border-bottom: 2px solid #333;
+    margin-bottom: 10px;
+    color: #EC1C24;
+    padding-bottom: 5px;
+}
+.result-item .post .post-content {
+    max-width: calc(100% - 90px);
+}
+.result-recent .result-item {
+    margin-bottom: 30px;
+}
+.news-wp {
+    background: url('../images/bg_home.png') left top repeat;
+}
+.result-news .result-item {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.result-news .result-item .post-image,
+.result-news .result-item .post-content {
+    width: 50%;
+    float: left;
+}
+.news-menu {
+    font-size: 11pt;
+    font-family: 'ElleFutura-Bold';
+}
+.news-menu a {
+    color: #333;
+}
+.news-menu a:hover {
+    color: #EC1C24;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+}
+.news-menu {
+    padding: 0;
+}
+.news-menu li.icon>a{
+    padding: 15px 5px;
+}
+.header {
+    min-height: 150px;
+}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .menu-top li,
+    .menu-bottom .menu-bottom-right-bottom li{
+        float: left;
+        width: 100%;
+    }
+}
+
+/* Medium devices (desktops, 992px and up 1200px) */
+@media screen and (max-width:1200px){
+     .topMessageHead {
+        padding: 15px 60px; 
+    }
+
+    .topMessageHead .introImg {
+        float: left;
+        padding-right: 5px;
+        padding-top: 20px;
+    }
+    
+    .topMessageHead .introTxt {
+        padding-left: 15px;
+        /*more 15px*/
+        float: left;
+        text-align: right;
+    }
+    
+    .topMessageHead .introTxt h1 {
+        width: 70%;
+        float: right;
+        text-align: right;
+        font-size: 17pt;
+    }
+    
+    .topMessageHead .introTxt p {
+        clear: both;
+        float: right;
+        text-align: right;
+        padding-top: 5px;
+        font-size: 11pt;
+    }
+    
+    .topMessageContent {
+        text-align: justify;
+        background-color: #EC1C24;
+        color: white;
+        /*for text*/
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Small devices (tablets, 768px and up to 992px) */
+@media screen and (max-width: 992px){
+   .topMessageHead {
+        padding: 15px 60px; 
+    }
+
+    .topMessageHead .introImg {
+        float: left;
+        padding-right: 5px;
+        padding-top: 20px;
+    }
+    
+    .topMessageHead .introTxt {
+        padding-left: 15px;
+        /*more 15px*/
+        float: left;
+        text-align: right;
+    }
+    
+    .topMessageHead .introTxt h1 {
+        width: 70%;
+        float: right;
+        text-align: right;
+        font-size: 15pt;
+    }
+    
+    .topMessageHead .introTxt p {
+        clear: both;
+        float: right;
+        text-align: right;
+    }
+    
+    .topMessageContent {
+        text-align: justify;
+        background-color: #EC1C24;
+        color: white;
+        /*for text*/
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .menu-top {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .menu-bottom .menu-bottom-right-bottom{
+        -webkit-column-count: initial;
+        -moz-column-count: initial;
+        column-count: initial;
+    }
+    .menu-top li {
+        margin-bottom: 10px;
+    }
+    .menu-bottom .menu-bottom-left,
+    .menu-bottom .menu-bottom-right {
+        width: 50%;
+    }
+    .menu-top li, .menu-bottom .menu-bottom-right-bottom li:nth-child(2n+1) {
+        padding-right: 3px;
+    }
+    .menu-bottom .menu-bottom-right-bottom li {
+        float: left;
+        width: 50%;
+    }
+    .image-text-wrap h2 {
+        font-size: 18pt;
+    }
+    .menu-footer>div:nth-child(1),
+    .menu-footer>div:nth-child(2),
+    .menu-footer>div:nth-child(4),
+    .menu-footer>div:nth-child(5) {
+        width: 40%;
+    }
+    .menu-footer>div:nth-child(3) {
+        width: 20%;
+    }
+    .menu-footer>div:nth-child(4) {
+        clear: both;
+    }
+    .news-menu {
+        font-size: 10pt;
+        font-family: 'ElleFutura-Bold';
+        width: 100%;
+        float: left;
+    }
+    .news-menu li>a {
+        padding: 15px 8px;
+    }
+}
+
+/*Extra small devices (phones, less than 768px)*/
+@media screen and (max-width: 768px) {
+    p {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .menu-top {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .menu-bottom .menu-bottom-right-bottom{
+        -webkit-column-count: initial;
+        -moz-column-count: initial;
+        column-count: initial;
+    }
+    .menu-top li {
+        margin-bottom: 10px;
+    }
+    .menu-bottom .menu-bottom-left,
+    .menu-bottom .menu-bottom-right {
+        width: 50%;
+    }
+    .menu-top li, .menu-bottom .menu-bottom-right-bottom li:nth-child(2n+1) {
+        padding-right: 3px;
+    }
+    .menu-bottom .menu-bottom-right-bottom li {
+        float: left;
+        width: 50%;
+    }
+    /*footer .left-banner {
+        padding-right: 15px;
+        margin-bottom: 15px;
+    }
+    footer .right-banner {
+        padding-left: 15px;
+    }*/
+    .image-text-wrap h2 {
+        font-family: "ElleFutura-Bold";
+        font-size: 16pt;    
+        color: #fff;
+        margin: 0 !important;
+    }
+    
+     .topMessageHead {
+        padding: 15px 60px; 
+    }
+
+    .topMessageHead .introImg {
+        float: left;
+        padding-right: 15px;
+        /*more 15px*/
+    }
+    
+    .topMessageHead .introTxt {
+        padding-left: 15px;
+        /*more 15px*/
+        float: left;
+        text-align: right;
+    }
+    
+    .topMessageHead .introTxt h1 {
+        width: 100%;
+        float: left;
+        text-align: left;
+        font-size: 25pt;
+    }
+    
+    .topMessageHead .introTxt p {
+        clear: both;
+        float: left;
+        text-align: justify;
+        font-size: 12pt;
+    }
+    
+    .topMessageContent {
+        text-align: justify;
+        background-color: #EC1C24;
+        color: white;
+        /*for text*/
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .menu-collapse {
+        margin-top: 10px;
+    }
+    .image-text-wrap h2 {
+        font-size: 18pt;
+    }
+    .news-menu {
+        font-size: 10pt;
+        font-family: 'ElleFutura-Bold';
+    }
+}
+
+@media screen and (max-width: 640px) {
+    p {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .navbar-top .list-inline>li {
+        padding: 0;
+    }
+    .logo {
+        width: 50%;
+    }
+
+    .icon-facebook,
+    .icon-search {
+        display: none !important;
+    }
+    .menu-bottom .menu-bottom-left,
+    .menu-bottom .menu-bottom-right {
+        width: 100%;
+        padding-right: 0;
+    }
+    .menu-bottom .menu-bottom-left a {
+        padding: 15px 0;
+    }
+    
+    .menu-top,
+    .menu-bottom .menu-bottom-right-bottom{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    
+    .menu-top li,
+    .menu-bottom .menu-bottom-left{
+        margin-bottom: 2px;
+    }
+    .menu-bottom-right-top,
+    .menu-bottom .menu-bottom-right-bottom li {
+        margin: 0;
+    }
+    .menu-top li a,
+    .menu-bottom .menu-bottom-left a,
+    .menu-bottom-right-bottom a,
+    .menu-bottom-right-top a {
+        text-align: left;
+        padding: 10px;
+        height: 35px;
+        font-size: 10pt;
+    }
+
+    .input-group-addon,
+    .input-group .form-control{
+        font-size: 10pt;
+    }
+    .menu-bottom-right-bottom a {
+        color:  #000;
+        border-bottom: 1px dashed #EC1C24;
+        background-color: #fff;
+    }
+     .menu-bottom .menu-bottom-right-bottom li {
+        width: 100%;
+    }
+    .image-text-wrap {
+        top: calc(50% - 5pt);
+    }
+    .image-text-wrap h2 {
+        font-family: 'ElleFutura-Bold';
+        font-size: 10pt;
+    }
+    
+    .topMessageHead {
+        padding: 15px 30px; 
+    }
+
+    .topMessageHead .introImg {
+        float: left;
+        padding-right: 15px;
+        /*more 15px*/
+    }
+    
+    .topMessageHead .introTxt {
+        padding-left: 15px;
+        /*more 15px*/
+        float: left;
+        text-align: right
+    }
+    
+    .topMessageHead .introTxt h1 {
+        width: 100%;
+        float: left;
+        text-align: left;
+        font-size: 12pt;
+    }
+    
+    .topMessageHead .introTxt p {
+        clear: both;
+        float: left;
+        text-align: justify;
+        font-size: 13px;
+    }
+    
+    .topMessageContent {
+        text-align: justify;
+        background-color: #EC1C24;
+        color: white;
+        /*for text*/
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu-collapse {
+        margin-top: 50px;
+    }
+    .menu-top li, .menu-bottom .menu-bottom-right-bottom li:nth-child(2n+1) {
+        padding: 0;
+    }
+    .js-collap span {
+        display: block;
+    }
+    .menu-bottom-right-bottom {
+        display: none;
+    }
+    .menu-top, .menu-bottom {
+        width: 85%;
+    }
+    .menu-footer>div:nth-child(1),
+    .menu-footer>div:nth-child(2),
+    .menu-footer>div:nth-child(4),
+    .menu-footer>div:nth-child(5),
+    .menu-footer>div:nth-child(3) {
+        width: 50%;
+    }
+    .menu-footer>div:nth-child(2n) {
+        padding-left: 2%;
+    }
+    .menu-footer>div:nth-child(2n+1) {
+        padding-right: 2%;
+    }
+    .menu-footer>div:nth-child(4) {
+        clear: none;
+    }
+    .menu-footer>div>a,
+    .footerMenuList{
+        font-size: 9pt;
+    }
+    footer {
+        position: relative;
+    }
+    .menu-footer>div:nth-child(5) {
+        position: absolute;
+        bottom: 100px;
+    }
+    .menu-footer>div:nth-child(5) span {
+        position: absolute;
+        right: 80px;
+    }
+    footer,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    .footerLastRow {
+        text-align: center;
+    }
+    .footerLastRow .pull-right,
+    .footerLastRow .pull-left {
+        float: none !important;
+    }
+    .footerLastRow p {
+        margin: 0;
+    }
+    .logo {
+        padding-left: 15px;
+    }
+    .navbar-top {
+        padding-right: 15px;
+    }
+    .result-news .result-item  {
+        /*width: 50%;*/
+        font-size: 9pt;
+    }
+    .result-news .result-item .post-image {
+        width: 30%;
+        padding-right: 10px;
+    }
+    .result-news .result-item .post-content {
+        width: 70%;
+    }
+    .header {
+        min-height: 90px;
+    }
+}

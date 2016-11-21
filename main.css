@@ -1,0 +1,76 @@
+/* CSS declarations go here */
+
+/* tinnt added font */
+@font-face {
+    font-family: 'ElleFutura';
+    src: url('font/ElleFutura.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-Bold';
+    src: url('font/ElleFutura-Bold.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-BoldItalic';
+    src: url('font/ElleFutura-BoldItalic.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-ExtraBold';
+    src: url('font/ElleFutura-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-ExtraBoldItalic';
+    src: url('font/ElleFutura-ExtraBoldItalic.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-Heavy';
+    src: url('font/ElleFutura-Heavy.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-HeavyItalic';
+    src: url('font/ElleFutura-HeavyItalic.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-Italic';
+    src: url('font/ElleFutura-Italic.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-Light';
+    src: url('font/ElleFutura-Light.woff');
+}
+
+@font-face {
+    font-family: 'ElleFutura-LightItalic';
+    src: url('font/ElleFutura-LightItalic.woff');
+}
+
+body{
+    font-family: 'ElleFutura';
+    font-size: 13pt;
+}
+
+h1{
+    font-family: 'ElleFutura-Bold';
+    font-size: 17pt;
+}
+
+termContent>li{
+    font-family: 'ElleFutura-Bold';
+    font-size: 15pt;
+}
+
+.container-fluid {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+

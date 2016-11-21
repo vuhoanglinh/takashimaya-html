@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Taka">
+    <meta name="keywords" content="Taka">
+    <meta name="author" content="Taka">
+    <title>Tin Tức Detail</title>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link type="text/css" rel="stylesheet" href="css/tintuc.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/stylelfe.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        sroll_tottop();
+    });
+
+    function sroll_tottop() {
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 200) {
+                $('.bt_totop').show();
+            }
+        });
+        $(window).scroll(function() {
+            if ($(window).scrollTop() < 200) {
+                $('.bt_totop').hide();
+            }
+        });
+        $('.bt_totop').unbind('click');
+        $('.bt_totop').hide();
+        $('.bt_totop').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500, function() {
+                $('.bt_totop').hide();
+            });
+        });
+        $('.main_content').unbind('mousewheel');
+    }
+    </script>
+</head>
+
+<body cz-shortcut-listen="true" class="news">
+    <div class="bt_totop " style="display: none;">
+        <img class="hinh_bt_top" src="images/top_back.png">
+    </div>
+    <!--menu-->
+    <header id="header" class="header">
+        <!-- brand image-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="pull-left logo">
+                    <a href="#">
+                        <img class="img-responsive" alt="Brand" src="./images/logo.png" width="307">
+                    </a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse news-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li class="top">
+                            <a href="#">TOP MESSAGE</a>
+                        </li>
+                        <li class="takashimaya">
+                            <a href="#">TAKASHIMAYA WORLDWIDE</a>
+                        </li>
+                        <li class="takashimaya">
+                            <a href="#">TAKASHIMAYA VIETNAM</a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">NEWS</a>
+                        </li>
+                        <li>
+                            <a href="#">CAREER</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT US</a>
+                        </li>
+                        <li class="icon">
+                            <a href="#"><img class="img-responsive" src="images/icon_search.png" width="30"></a>
+                        </li>
+                        <li class="icon">
+                            <a href="#"><img class="img-responsive" src="images/icon_fb.png" width="30"></a>
+                        </li>
+                        <li class="icon">
+                            <a href="#"><img class="img-responsive" src="images/icon_menu.png" width="30"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--menu-->
+    <section class="news-wp">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="thanhngang">
+                        <a href="">
+                            <div class="news_chitiet active">NEWS</div>
+                        </a>
+                        <a href="">
+                            <div class="culture">CULTURE</div>
+                        </a>
+                    </div>
+                    <div class="content_home_trai">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="title_text1">lorem ipsum dolor sit amet</div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="chiase_detail">
+                                    <img class="img-responsive icon_email visible-lg visible-md" src="images/icon_email.png">
+                                    <img class="img-responsive icon_email visible-lg visible-md" src="images/icon_f.png">
+                                    <img class="img-responsive icon_email visible-lg visible-md" src="images/icon_tw.png">
+                                    <img class="img-responsive icon_email visible-lg visible-md" src="images/icon_in.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_content">
+                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                            <img class="img-responsive margin-center" src="images/img1.png">
+                            <center>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</center>
+                            <p class="occaecat">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur id est laborum.
+                            </p>
+                            <img class="img-responsive margin-center" src="images/img2.png">
+                            <center>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui</center>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 item_phai result-news">
+                    <div class="result-item">
+                        <div class="post-image">
+                            <img src="images/IMAGE_TAKASHIMAYA_CORPORATE-71.jpg" class="img-responsive">
+                        </div>
+                        <div class="post-content">
+                            <p class="post-title">TVELIT SIT AMET TEMPOR</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <br/> Tvelit sit amet tempor fermentum, ligula ligula euismod. Lorem ipsum dolor sit amet, elit.</p>
+                            <a href="#">
+                                <div class="reading"><img class="img-responsive" src="images/reading.png"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="post-image">
+                            <img src="images/IMAGE_TAKASHIMAYA_CORPORATE-71.jpg" class="img-responsive">
+                        </div>
+                        <div class="post-content">
+                            <p class="post-title">TVELIT SIT AMET TEMPOR</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <br/> Tvelit sit amet tempor fermentum, ligula ligula euismod. Lorem ipsum dolor sit amet, elit.</p>
+                            <a href="#">
+                                <div class="reading"><img class="img-responsive" src="images/reading.png"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="post-image">
+                            <img src="images/IMAGE_TAKASHIMAYA_CORPORATE-71.jpg" class="img-responsive">
+                        </div>
+                        <div class="post-content">
+                            <p class="post-title">TVELIT SIT AMET TEMPOR</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <br/> Tvelit sit amet tempor fermentum, ligula ligula euismod. Lorem ipsum dolor sit amet, elit.</p>
+                            <a href="#">
+                                <div class="reading"><img class="img-responsive" src="images/reading.png"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="post-image">
+                            <img src="images/IMAGE_TAKASHIMAYA_CORPORATE-71.jpg" class="img-responsive">
+                        </div>
+                        <div class="post-content">
+                            <p class="post-title">TVELIT SIT AMET TEMPOR</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <br/> Tvelit sit amet tempor fermentum, ligula ligula euismod. Lorem ipsum dolor sit amet, elit.</p>
+                            <a href="#">
+                                <div class="reading"><img class="img-responsive" src="images/reading.png"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="post-image">
+                            <img src="images/IMAGE_TAKASHIMAYA_CORPORATE-71.jpg" class="img-responsive">
+                        </div>
+                        <div class="post-content">
+                            <p class="post-title">TVELIT SIT AMET TEMPOR</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <br/> Tvelit sit amet tempor fermentum, ligula ligula euismod. Lorem ipsum dolor sit amet, elit.</p>
+                            <a href="#">
+                                <div class="reading"><img class="img-responsive" src="images/reading.png"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="btn_item"><img class="img-responsive margin-center" src="images/bt_see_all.png"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <div class="row footer2Img">
+                <div class="col-xs-6 left-banner">
+                    <div class="image-wp">
+                        <a href="#">
+                            <img class="img-responsive" alt="Brand" src="./images/IMAGE_TAKASHIMAYA_CORPORATE-68.jpg" width="100%">
+                        </a>
+                        <div class="image-text-wrap">
+                            <h2>SHOPPING NOWS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 right-banner">
+                    <div class="image-wp">
+                        <a href="#">
+                            <img class="img-responsive" alt="Brand" src="./images/IMAGE_TAKASHIMAYA_CORPORATE-69.jpg" width="100%">
+                        </a>
+                        <div class="image-text-wrap">
+                            <h2>VISIT THE STORE</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row menu-footer">
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <a href="#">
+                        <div class="footerMenuHeader">TAKASHIMAYA VIETNAM </div>
+                    </a>
+                    <ul class="list-unstyled footerMenuList">
+                        <li>Introduction</li>
+                        <li>Work with us</li>
+                        <li>Look for partnership</li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <a href="#">
+                        <div class="footerMenuHeader">TAKASHIMAYA WORLDWIDE </div>
+                    </a>
+                    <ul class="list-unstyled footerMenuList">
+                        <li> Takashimaya Group </li>
+                        <li> Takashimaya Singapore </li>
+                        <li> Shanghai Takashimaya </li>
+                        <li> Dayeh (Taipei) Takashimaya </li>
+                        <li> Japan Headquarter </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-1">
+                    <a href="#">
+                        <div class="footerMenuHeader">NEWS</div>
+                    </a>
+                    <ul class="list-unstyled footerMenuList">
+                        <li> Newsroom </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <a href="#">
+                        <div class="footerMenuHeader">CONTACT US</div>
+                    </a>
+                    <ul class="list-unstyled footerMenuList">
+                        <li>Location map </li>
+                        <li>Address: Saigon Centre, 65 Le Loi street, </li>
+                        <li>Ben Nghe Ward, District 1, HCMC, Vietnam. </li>
+                        <li>Phone: (84-8) 3827 - 8555 </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#">
+                        <div class="footerMenuHeader">
+                            Follow us on
+                            <span><img src="./images/IMAGE_TAKASHIMAYA_CORPORATE-08.jpg" class="img-responsive" width="28.08px"> </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row footerLastRow">
+                <div class="col-xs-12 col-sm-6">
+                    <p class="pull-left">© 2016 Takashimaya Vietnam Ltd. All Rights Reserved.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p class="pull-right">Terms of use | Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
